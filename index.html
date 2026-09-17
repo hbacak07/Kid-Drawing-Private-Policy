@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kid Drawing – Gizlilik Politikası / Privacy Policy</title>
+<meta name="description" content="Kid Drawing gizlilik politikası ve hesap silme talebi. Privacy policy and account deletion request.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F6F9FF;
+    --sheet: #FFFFFF;
+    --ink: #1F2B4D;
+    --muted: #5A6485;
+    --line: #DCE3F2;
+    --blue: #3B7DDD;
+    --yellow: #FFC83D;
+    --red: #F2645A;
+    --green: #3DBE8B;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #141A2B;
+      --sheet: #1C2438;
+      --ink: #EEF2FB;
+      --muted: #A9B2CC;
+      --line: #2E3854;
+      --blue: #7AA9F0;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  .crayons {
+    height: 10px;
+    background: linear-gradient(90deg,
+      var(--red) 0 25%, var(--yellow) 25% 50%, var(--green) 50% 75%, var(--blue) 75% 100%);
+  }
+  header, main, footer {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  header { padding-top: 36px; padding-bottom: 8px; }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .app {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: "Baloo 2", "Nunito", sans-serif;
+    font-weight: 800;
+    font-size: 1.25rem;
+  }
+  .app svg { width: 44px; height: 44px; flex: none; }
+  .lang {
+    display: inline-flex;
+    border: 2px solid var(--line);
+    border-radius: 999px;
+    padding: 3px;
+    background: var(--sheet);
+  }
+  .lang button {
+    font: inherit;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    padding: 6px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .lang button[aria-pressed="true"] { background: var(--blue); color: #fff; }
+  .lang button:focus-visible, a:focus-visible { outline: 3px solid var(--yellow); outline-offset: 2px; }
+  h1 {
+    font-family: "Baloo 2", "Nunito", sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.2rem, 7vw, 3.4rem);
+    line-height: 1.05;
+    margin: 32px 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .scribble { display: block; width: 190px; height: 16px; margin-bottom: 14px; }
+  .updated { color: var(--muted); margin: 0 0 8px; }
+  nav.toc { margin: 18px 0 8px; font-size: 0.95rem; }
+  nav.toc a { color: var(--blue); font-weight: 700; margin-right: 18px; }
+  main { padding-bottom: 40px; }
+  article {
+    background: var(--sheet);
+    border: 2px solid var(--line);
+    border-radius: 22px;
+    padding: clamp(22px, 5vw, 44px);
+    margin-top: 20px;
+  }
+  h2 {
+    font-family: "Baloo 2", "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 1.45rem;
+    line-height: 1.25;
+    margin: 34px 0 8px;
+  }
+  article h2:first-child { margin-top: 0; }
+  p, ul { margin: 0 0 14px; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  li::marker { color: var(--blue); }
+  a { color: var(--blue); }
+  .note {
+    border-left: 5px solid var(--yellow);
+    padding: 10px 16px;
+    background: color-mix(in srgb, var(--yellow) 14%, transparent);
+    border-radius: 0 12px 12px 0;
+  }
+  #delete-account, #hesap-silme { border-color: var(--red); }
+  .mail {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 10px 20px;
+    background: var(--red);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 999px;
+    text-decoration: none;
+  }
+  footer { color: var(--muted); font-size: 0.9rem; padding-bottom: 40px; }
+  [data-lang] { display: none; }
+  body.tr [data-lang="tr"], body.en [data-lang="en"] { display: block; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body class="tr">
+<div class="crayons" aria-hidden="true"></div>
+
+<header>
+  <div class="top">
+    <div class="app">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <rect x="2" y="2" width="44" height="44" rx="14" fill="#3B7DDD"/>
+        <path d="M11 33c5-9 9 3 14-6s8 1 12-5" stroke="#FFC83D" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <circle cx="35" cy="14" r="4" fill="#F2645A"/>
+      </svg>
+      <span>Kid Drawing</span>
+    </div>
+    <div class="lang" role="group" aria-label="Dil / Language">
+      <button type="button" data-set="tr" aria-pressed="true">Türkçe</button>
+      <button type="button" data-set="en" aria-pressed="false">English</button>
+    </div>
+  </div>
+
+  <div data-lang="tr">
+    <h1>Gizlilik Politikası</h1>
+    <svg class="scribble" viewBox="0 0 190 16" aria-hidden="true"><path d="M3 11c30-8 55 4 85-2s62-6 99 0" stroke="#FFC83D" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
+    <p class="updated">Son güncelleme: 17.09.2026</p>
+    <nav class="toc"><a href="#gizlilik">Politika</a><a href="#hesap-silme">Hesap silme</a></nav>
+  </div>
+  <div data-lang="en">
+    <h1>Privacy Policy</h1>
+    <svg class="scribble" viewBox="0 0 190 16" aria-hidden="true"><path d="M3 11c30-8 55 4 85-2s62-6 99 0" stroke="#FFC83D" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
+    <p class="updated">Last updated: 17.09.2026</p>
+    <nav class="toc"><a href="#privacy">Policy</a><a href="#delete-account">Account deletion</a></nav>
+  </div>
+</header>
+
+<main>
+  <!-- ===================== TÜRKÇE ===================== -->
+  <div data-lang="tr">
+    <article id="gizlilik">
+      <p>Hasmel Studio ("biz") olarak, Kid Drawing ("Uygulama") kullanıcılarının, özellikle çocukların gizliliğine önem veriyoruz. Bu politika, Uygulama'yı kullandığınızda hangi bilgilerin toplandığını, nasıl kullanıldığını ve haklarınızı açıklar.</p>
+
+      <h2>Uygulama hakkında</h2>
+      <p>Kid Drawing, çocukların basit resimler çizmesine olanak tanıyan bir çizim uygulamasıdır. Uygulama çocuklar dahil her yaştan kullanıcıya yöneliktir ve Google Play Aileler Politikası'na uygun şekilde tasarlanmıştır.</p>
+
+      <h2>Topladığımız bilgiler</h2>
+      <p><strong>Kullanıcı adı:</strong> Uygulama içi satın alımlarınızı takip edebilmek ve geri yükleyebilmek için bir kullanıcı adı oluşturmanız istenir. Kullanıcı adı olarak gerçek ad, soyad, e-posta adresi, telefon numarası veya başka bir kişisel bilgi kullanılmamalıdır. Ebeveynlerin bu adımda çocuklarına yardımcı olmasını öneririz.</p>
+      <p><strong>Satın alma bilgileri:</strong> Veritabanımızda yalnızca kullanıcı adı ve bu kullanıcı adıyla satın alınan paket bilgileri saklanır. Ödemeler tamamen Google Play Faturalandırma sistemi üzerinden gerçekleşir; kredi kartı, banka bilgisi veya fatura adresi gibi ödeme bilgilerinize erişimimiz yoktur ve bu bilgileri saklamayız.</p>
+      <p><strong>Çizimler:</strong> Uygulamada yapılan çizimler yalnızca cihazınızda saklanır, sunucularımıza gönderilmez.</p>
+      <p>Bunların dışında ad, e-posta, konum, fotoğraf, kişiler listesi veya benzeri kişisel bilgiler toplamıyoruz.</p>
+
+      <h2>Reklamlar</h2>
+      <p>Uygulama, geliştirme maliyetlerini karşılamak için reklam gösterir. Reklamlar Google AdMob aracılığıyla sunulur.</p>
+      <ul>
+        <li>Yalnızca Google Play Aileler Politikası kapsamında sertifikalı reklam ağları kullanılır.</li>
+        <li>Çocuklara kişiselleştirilmiş (ilgi alanına dayalı) reklam gösterilmez ve yeniden pazarlama yapılmaz.</li>
+        <li>Reklam ağı; reklamların gösterilmesi, sıklığının sınırlandırılması ve kötüye kullanımın önlenmesi amacıyla cihaz türü ve işletim sistemi sürümü gibi sınırlı teknik veriler işleyebilir.</li>
+        <li>Reklam kimliği (Advertising ID) çocuk kullanıcılardan toplanmaz veya iletilmez.</li>
+      </ul>
+      <p>Reklam sağlayıcısının veri uygulamaları için: <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a></p>
+
+      <h2>Bilgilerin kullanım amacı</h2>
+      <p>Topladığımız sınırlı bilgiler yalnızca satın alınan paketleri kullanıcıya tanımlamak ve geri yüklemek, Uygulama'nın düzgün çalışmasını sağlamak ve yasal yükümlülüklere uymak için kullanılır. Bilgiler satılmaz, kiralanmaz veya pazarlama amacıyla üçüncü taraflarla paylaşılmaz.</p>
+
+      <h2>Üçüncü taraf hizmetler</h2>
+      <ul>
+        <li>Google Play Hizmetleri ve Google Play Faturalandırma</li>
+        <li>Google AdMob</li>
+        <li>Firebase</li>
+      </ul>
+      <p>Bu hizmetlerin kendi gizlilik politikaları geçerlidir.</p>
+
+      <h2>Veri güvenliği ve saklama süresi</h2>
+      <p>Verileriniz güvenli sunucularda, yetkisiz erişime karşı makul teknik önlemlerle korunur. Satın alma bilgileri, hesap aktif olduğu sürece veya silinmesi talep edilene kadar saklanır.</p>
+
+      <h2>Çocukların gizliliği</h2>
+      <p>Çocuklardan bilerek kişisel bilgi toplamayız. Bir çocuğun kullanıcı adı alanına kişisel bilgi girdiğini fark eden ebeveynler bizimle iletişime geçerek bu bilginin silinmesini isteyebilir; talep en kısa sürede yerine getirilir. Uygulama içi satın alımlar Google Play'in ebeveyn onayı ve şifre korumaları ile yönetilebilir.</p>
+
+      <h2>Haklarınız</h2>
+      <p>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve geçerli diğer mevzuat (GDPR, COPPA vb.) kapsamında; hakkınızda veri işlenip işlenmediğini öğrenme, verilerin düzeltilmesini veya silinmesini isteme ve işlemeye itiraz etme haklarına sahipsiniz.</p>
+
+      <h2>Politikadaki değişiklikler</h2>
+      <p>Bu politikayı zaman zaman güncelleyebiliriz. Güncellemeler bu sayfada yayımlanır ve "Son güncelleme" tarihi değiştirilir.</p>
+
+      <h2>İletişim</h2>
+      <p>E-posta: <a href="mailto:hasmelstudio@gmail.com">hasmelstudio@gmail.com</a><br>Geliştirici: Hasmel Studio</p>
+    </article>
+
+    <article id="hesap-silme">
+      <h2>Hesap ve veri silme talebi</h2>
+      <p>Kid Drawing hesabınızı ve ilişkili tüm verileri (kullanıcı adı ve satın alma kayıtları) silmek için:</p>
+      <ul>
+        <li>Aşağıdaki düğmeyle bize e-posta gönderin.</li>
+        <li>Konu satırına "Hesap silme talebi" yazın ve mesajda kullanıcı adınızı belirtin.</li>
+        <li>Talebiniz en geç [30] gün içinde işleme alınır ve size bilgi verilir.</li>
+      </ul>
+      <p class="note">Silme işleminden sonra satın alma kayıtlarınız kalıcı olarak kaldırılır ve bu kullanıcı adıyla satın alımlar geri yüklenemez. Google Play'deki ödeme kayıtları Google tarafından tutulur ve bu işlemden etkilenmez.</p>
+      <a class="mail" href="mailto:hasmelstudio@gmail.com?subject=Hesap%20silme%20talebi">Silme talebi gönder</a>
+    </article>
+  </div>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <div data-lang="en">
+    <article id="privacy">
+      <p>Hasmel Studio ("we") cares about the privacy of Kid Drawing ("the App") users, especially children. This policy explains what information is collected when you use the App, how it is used, and your rights.</p>
+
+      <h2>About the App</h2>
+      <p>Kid Drawing is a drawing app that lets children create simple pictures. The App is intended for users of all ages, including children, and is designed to comply with the Google Play Families Policy.</p>
+
+      <h2>Information we collect</h2>
+      <p><strong>Username:</strong> You are asked to create a username so that in-app purchases can be tracked and restored. Do not use a real name, surname, email address, phone number or any other personal information as a username. We recommend that parents help their children with this step.</p>
+      <p><strong>Purchase information:</strong> Our database stores only the username and the packages purchased with it. All payments are processed by Google Play Billing; we have no access to, and do not store, payment details such as card numbers, bank details or billing addresses.</p>
+      <p><strong>Drawings:</strong> Drawings made in the App are stored only on your device and are not sent to our servers.</p>
+      <p>We do not collect names, email addresses, location, photos, contacts or any similar personal information.</p>
+
+      <h2>Advertising</h2>
+      <p>The App shows ads to cover development costs. Ads are served through Google AdMob.</p>
+      <ul>
+        <li>Only ad networks certified under the Google Play Families Policy are used.</li>
+        <li>Children are not shown personalized (interest-based) ads, and no remarketing is performed.</li>
+        <li>The ad network may process limited technical data, such as device type and operating system version, to serve ads, cap frequency and prevent abuse.</li>
+        <li>The Advertising ID is not collected from or transmitted for child users.</li>
+      </ul>
+      <p>For the ad provider's data practices: <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a></p>
+
+      <h2>How we use information</h2>
+      <p>The limited information we collect is used only to identify and restore purchased packages, keep the App working properly, and meet legal obligations. It is never sold, rented or shared with third parties for marketing.</p>
+
+      <h2>Third-party services</h2>
+      <ul>
+        <li>Google Play Services and Google Play Billing</li>
+        <li>Google AdMob</li>
+        <li>[Database provider, e.g. Firebase]</li>
+      </ul>
+      <p>These services are governed by their own privacy policies.</p>
+
+      <h2>Data security and retention</h2>
+      <p>Your data is kept on secure servers with reasonable technical safeguards against unauthorized access. Purchase information is retained while the account is active or until deletion is requested.</p>
+
+      <h2>Children's privacy</h2>
+      <p>We do not knowingly collect personal information from children. Parents who notice that a child has entered personal information as a username can contact us to have it deleted, and we will do so promptly. In-app purchases can be controlled with Google Play's parental approval and password protection.</p>
+
+      <h2>Your rights</h2>
+      <p>Under the Turkish Personal Data Protection Law (KVKK) and other applicable laws (GDPR, COPPA, etc.), you have the right to learn whether data about you is processed, to request correction or deletion, and to object to processing.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>We may update this policy from time to time. Changes will be posted on this page with a new "Last updated" date.</p>
+
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:hasmelstudio@gmail.com">hasmelstudio@gmail.com</a><br>Developer: Hasmel Studio</p>
+    </article>
+
+    <article id="delete-account">
+      <h2>Account and data deletion request</h2>
+      <p>To delete your Kid Drawing account and all associated data (username and purchase records):</p>
+      <ul>
+        <li>Send us an email using the button below.</li>
+        <li>Use the subject "Account deletion request" and include your username in the message.</li>
+        <li>Your request will be processed within [30] days and you will be notified.</li>
+      </ul>
+      <p class="note">After deletion, your purchase records are permanently removed and purchases can no longer be restored with that username. Payment records in Google Play are kept by Google and are not affected.</p>
+      <a class="mail" href="mailto:hasmelstudio@gmail.com?subject=Account%20deletion%20request">Send deletion request</a>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Hasmel Studio</p>
+</footer>
+
+<script>
+  (function () {
+    var buttons = document.querySelectorAll(".lang button");
+    function setLang(lang) {
+      document.body.className = lang;
+      document.documentElement.lang = lang;
+      buttons.forEach(function (b) {
+        b.setAttribute("aria-pressed", b.dataset.set === lang ? "true" : "false");
+      });
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () { setLang(b.dataset.set); });
+    });
+    // ?lang=en veya #privacy / #delete-account ile İngilizce açılır
+    var params = new URLSearchParams(location.search);
+    var hash = location.hash;
+    var lang = params.get("lang");
+    if (!lang) {
+      if (hash === "#privacy" || hash === "#delete-account") lang = "en";
+      else if (hash === "#gizlilik" || hash === "#hesap-silme") lang = "tr";
+      else lang = (navigator.language || "tr").toLowerCase().indexOf("tr") === 0 ? "tr" : "en";
+    }
+    setLang(lang);
+    if (hash) { var el = document.querySelector(hash); if (el) el.scrollIntoView(); }
+  })();
+</script>
+</body>
+</html>
